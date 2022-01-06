@@ -2,10 +2,64 @@ html { overflow-y: scroll; }
 
 body { font-family: sans-serif; }
 
+.wrapper {
+    visibility: visible;
+}
+
 /* ---- grid ---- */
+
+.wrap-container {
+    position: relative;
+    height: 100%;
+}
+
+.masonry {
+    padding: 60px 0;
+}
 
 .grid {
   background: #DDD;
+
+}
+
+.item-desc {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: inherit;
+    background-color: red;
+    opacity: 0.5;
+    visibility: hidden;
+    z-index: 10;
+    top: 0px;
+    // transition: all 1s ease-in;
+    h2 {
+        color: yellow;
+        text-transform: uppercase;
+        font-size: 38px;
+        padding: 40px 0;
+    }
+    .item-desc__wrap-content {
+        max-width: 100%;
+        width: 550px;
+    }
+    .closing {
+        cursor: pointer;
+        font-size: 72px;
+        font-weight: bold;
+        position: absolute;
+        right: 90px;
+        top: 90px;
+        color: black;
+    }
+}
+
+.active {
+    visibility: visible;
+    // transition: visibility 1s linear;
 }
 
 /* clear fix */
@@ -24,6 +78,7 @@ body { font-family: sans-serif; }
 
 .grid-item {
   float: left;
+  position: relative;
 }
 
 .grid-item img {
