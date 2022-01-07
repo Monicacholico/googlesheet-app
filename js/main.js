@@ -215,17 +215,16 @@ var msnry = new Masonry( grid, {
 // Will display overlay on image hover
 const itemOne = document.getElementById('item1');
 console.log(itemOne)
-const overlay = document.querySelector('.item-desc');
+const overlay = document.getElementById('itemOne');
 console.log(overlay);
 const close = document.querySelector('.closing');
 function displayDesc() {
-	// overlay.backgroundColor = 'yellow'
-	// overlay.style.visibility = 'visible';
-	// overlay.style.transition = 'all 2s linear';
-	overlay.classList.add('active');
+	overlay.style.display = 'flex';
+	overlay.classList.add('item-desc');
 }
 
 itemOne.addEventListener('mouseover', displayDesc);
 close.addEventListener('click', function() {
-	overlay.classList.remove('active');
+	overlay.style.display = 'none';
+	overlay.classList.remove('item-desc');
 })

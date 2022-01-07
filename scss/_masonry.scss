@@ -22,30 +22,64 @@ body { font-family: sans-serif; }
 
 }
 
+#itemOne {
+    background-color: red;
+    display: none;
+
+}
+
 .item-desc {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 100vw;
-    height: inherit;
-    background-color: red;
     opacity: 0.5;
-    visibility: hidden;
+ 
     z-index: 10;
     top: 0px;
+
+    animation: grow 2s linear forwards;
+    animation: grow 2s linear forwards;
+    animation: grow 2s linear forwards;
     // transition: all 1s ease-in;
+
+    .item-desc__wrap-content {
+        position: absolute;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        top: 200px;
+        max-width: 100%;
+        width: 550px;
+        animation: showUp 1s linear forwards 3s;
+        -moz-animation: showUp 1s linear forwards 3s;
+        -o-animation: showUp 1s linear forwards 3s;
+        -webkit-animation: showUp 1s linear forwards 3s;
+        transition: all 1s linear 2s;
+    }
+
     h2 {
         color: yellow;
         text-transform: uppercase;
         font-size: 38px;
         padding: 40px 0;
+        transition: all 1s linear 2s;
     }
-    .item-desc__wrap-content {
-        max-width: 100%;
-        width: 550px;
+
+    @keyframes showUp {
+        0% {opacity: 0}
+        100% {opacity: 1}
     }
+    @-moz-keyframes showUp {
+        0% {opacity: 0}
+        100% {opacity: 1}
+    }
+    @-webkit-keyframes showUp {
+        0% {opacity: 0}
+        100% {opacity: 1}
+    }
+
     .closing {
         cursor: pointer;
         font-size: 72px;
@@ -55,6 +89,23 @@ body { font-family: sans-serif; }
         top: 90px;
         color: black;
     }
+}
+
+@keyframes grow {
+    0% {width: 0; height: 0; visibility:hidden;}
+    100% {width: 100vw; height: inherit; visibility: visible;}
+}
+@-webkit-keyframes grow {
+    0% {width: 0; height: 0; visibility:hidden;}
+    100% {width: 100vw; height: inherit; visibility: visible;}
+}
+@-moz-keyframes grow {
+    0% {width: 0; height: 0; visibility:hidden;}
+    100% {width: 100vw; height: inherit; visibility: visible;}
+}
+@-o-keyframes grow {
+    0% {width: 0; height: 0; visibility:hidden;}
+    100% {width: 100vw; height: inherit; visibility: visible;}
 }
 
 .active {
