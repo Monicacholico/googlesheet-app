@@ -214,17 +214,27 @@ var msnry = new Masonry( grid, {
 
 // Will display overlay on image hover
 const itemOne = document.getElementById('item1');
-console.log(itemOne)
 const overlay = document.getElementById('itemOne');
-console.log(overlay);
-const close = document.querySelector('.closing');
+const itemTwo = document.getElementById('item2');
+const overlay1 = document.getElementById('itemTwo');
+const close = document.querySelectorAll('.closing');
+const allclosing = [...close];
 function displayDesc() {
 	overlay.style.display = 'flex';
 	overlay.classList.add('item-desc');
+	overlay1.style.display = 'flex';
+	overlay1.classList.add('item-desc');
 }
 
 itemOne.addEventListener('mouseover', displayDesc);
-close.addEventListener('click', function() {
-	overlay.style.display = 'none';
-	overlay.classList.remove('item-desc');
+
+itemTwo.addEventListener('mouseover', displayDesc);
+
+allclosing.forEach(closing => {
+	closing.addEventListener('click', function() {
+		overlay.style.display = 'none';
+		overlay.classList.remove('item-desc');
+		overlay1.style.display = 'none';
+		overlay1.classList.remove('item-desc');
+	})
 })
