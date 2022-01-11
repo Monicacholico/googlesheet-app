@@ -23,16 +23,18 @@ body { font-family: sans-serif; }
 }
 
 #itemOne {
-    background-color: red;
-    display: none;
+    // background-color: red;
+    // display: none;
 }
 #itemTwo {
-    background-color: yellow;
-    display: none;
-    border-radius: 50%;
+    // background-color: yellow;
+    // display: none;
+    // border-radius: 50%;
 }
 
 .item-desc {
+    background-color: red;
+    display: none;
     display: flex;
     flex-flow: column wrap;
     align-items: center;

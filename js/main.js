@@ -222,19 +222,19 @@ const allclosing = [...close];
 function displayDesc() {
 	overlay.style.display = 'flex';
 	overlay.classList.add('item-desc');
-	overlay1.style.display = 'flex';
-	overlay1.classList.add('item-desc');
+	// overlay1.style.display = 'flex';
+	// overlay1.classList.add('item-desc');
 }
 
 itemOne.addEventListener('mouseover', displayDesc);
 
-itemTwo.addEventListener('mouseover', displayDesc);
+// itemTwo.addEventListener('mouseover', displayDesc);
 
 allclosing.forEach(closing => {
 	closing.addEventListener('click', function() {
 		overlay.style.display = 'none';
 		overlay.classList.remove('item-desc');
-		overlay1.style.display = 'none';
-		overlay1.classList.remove('item-desc');
+		// overlay1.style.display = 'none';
+		// overlay1.classList.remove('item-desc');
 	})
 })
