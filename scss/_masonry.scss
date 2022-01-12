@@ -24,17 +24,17 @@ body { font-family: sans-serif; }
 
 #itemOne {
     // background-color: red;
-    // display: none;
+    display: none;
 }
 #itemTwo {
     // background-color: yellow;
-    // display: none;
+    display: none;
     // border-radius: 50%;
 }
 
 .item-desc {
-    background-color: red;
-    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    // display: none;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
