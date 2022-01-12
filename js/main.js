@@ -217,7 +217,9 @@ const itemOne = document.getElementById('item1');
 const overlay = document.getElementById('itemOne');
 const itemTwo = document.getElementById('item2');
 const overlay1 = document.getElementById('itemTwo');
+const content1 = document.querySelector('.item-desc__wrap-content');
 const close = document.querySelectorAll('.closing');
+
 const allclosing = [...close];
 function displayDesc() {
 	overlay.style.display = 'flex';
@@ -234,6 +236,8 @@ allclosing.forEach(closing => {
 	closing.addEventListener('click', function() {
 		overlay.style.display = 'none';
 		overlay.classList.remove('item-desc');
+		console.log(itemOne.nextSibling);
+		content1.style.display = "none";
 		// overlay1.style.display = 'none';
 		// overlay1.classList.remove('item-desc');
 	})
