@@ -76,33 +76,54 @@ body { font-family: sans-serif; }
     -moz-animation: showUp 1s linear forwards 5s;
     -o-animation: showUp 1s linear forwards 5s;
     -webkit-animation: showUp 1s linear forwards 5s;
-    transition: all 1s linear 5s;
+   ;
+
+    h2 {
+        color: yellow;
+        text-transform: uppercase;
+        font-size: 58px;
+        font-weight: bold;
+        padding: 40px 0;
+        transition: all 1s linear 2s;
+        position: absolute;
+        top: 0;
+        left: 25%;
+        transition: all 1s linear 5s
+    }
+    p {
+        font-size: 24px;
+        position:absolute;
+        font-weight: 600;
+        top: 15vh;
+        left: 25%;
+        transition: all 1s linear 5s
+    }
+    
+    @keyframes showUp {
+        0% {opacity: 0}
+        100% {opacity: 1}
+    }
+    @-moz-keyframes showUp {
+        0% {opacity: 0}
+        100% {opacity: 1}
+    }
+    @-webkit-keyframes showUp {
+        0% {opacity: 0}
+        100% {opacity: 1}
+    }
+    
 }
 
-h2 {
-    color: yellow;
-    text-transform: uppercase;
-    font-size: 38px;
-    padding: 40px 0;
-    transition: all 1s linear 2s;
-    position: absolute;
-}
-p {
-    position:absolute;
+
+.descItem {
+    display: none;
 }
 
-@keyframes showUp {
-    0% {opacity: 0}
-    100% {opacity: 1}
+.descItemshow {
+    display: flex;
 }
-@-moz-keyframes showUp {
-    0% {opacity: 0}
-    100% {opacity: 1}
-}
-@-webkit-keyframes showUp {
-    0% {opacity: 0}
-    100% {opacity: 1}
-}
+
+
 
 
 @keyframes grow {

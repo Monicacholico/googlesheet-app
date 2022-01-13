@@ -224,6 +224,8 @@ const allclosing = [...close];
 function displayDesc() {
 	overlay.style.display = 'flex';
 	overlay.classList.add('item-desc');
+	content1.classList.remove('descItem');
+	content1.classList.add('descItemshow');
 	// overlay1.style.display = 'flex';
 	// overlay1.classList.add('item-desc');
 }
@@ -237,7 +239,8 @@ allclosing.forEach(closing => {
 		overlay.style.display = 'none';
 		overlay.classList.remove('item-desc');
 		console.log(itemOne.nextSibling);
-		content1.style.display = "none";
+		content1.classList.remove('descItemshow')
+		content1.classList.add('descItem');
 		// overlay1.style.display = 'none';
 		// overlay1.classList.remove('item-desc');
 	})
