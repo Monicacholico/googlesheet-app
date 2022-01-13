@@ -215,22 +215,38 @@ var msnry = new Masonry( grid, {
 // Will display overlay on image hover
 const itemOne = document.getElementById('item1');
 const overlay = document.getElementById('itemOne');
+const descriptions = document.querySelectorAll('description-content');
+const allDescriptions = [...descriptions];
 const itemTwo = document.getElementById('item2');
 const overlay1 = document.getElementById('itemTwo');
 const content1 = document.querySelector('.item-desc__wrap-content');
+const content = document.querySelectorAll('.item-desc__wrap-content');
+const allContents = [...content];
 const close = document.querySelectorAll('.closing');
-
 const allclosing = [...close];
+
+
+
 function displayDesc() {
+	// allDescriptions.forEach( desc => {
+	// 	desc.style.display = 'flex';
+	// 	desc.classList.add('item-desc');
+	// })
+	// allContents.forEach ( content => {
+	// 	content.classList.remove('descItem');
+	// 	content.classList.add('descItemshow');
+	// })
+
 	overlay.style.display = 'flex';
 	overlay.classList.add('item-desc');
 	content1.classList.remove('descItem');
 	content1.classList.add('descItemshow');
-	// overlay1.style.display = 'flex';
-	// overlay1.classList.add('item-desc');
 }
 
+
+
 itemOne.addEventListener('mouseover', displayDesc);
+// itemTwo.addEventListener('mouseover', displayDesc);
 
 // itemTwo.addEventListener('mouseover', displayDesc);
 
@@ -238,7 +254,6 @@ allclosing.forEach(closing => {
 	closing.addEventListener('click', function() {
 		overlay.style.display = 'none';
 		overlay.classList.remove('item-desc');
-		console.log(itemOne.nextSibling);
 		content1.classList.remove('descItemshow')
 		content1.classList.add('descItem');
 		// overlay1.style.display = 'none';

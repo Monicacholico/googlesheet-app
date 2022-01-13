@@ -69,34 +69,33 @@ body { font-family: sans-serif; }
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    top: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 100%;
     width: 550px;
-    animation: showUp 1s linear forwards 5s;
-    -moz-animation: showUp 1s linear forwards 5s;
-    -o-animation: showUp 1s linear forwards 5s;
-    -webkit-animation: showUp 1s linear forwards 5s;
-   ;
 
     h2 {
-        color: yellow;
+        opacity: 0;
+        color: orangered;
         text-transform: uppercase;
         font-size: 58px;
-        font-weight: bold;
+        font-weight: 900;
         padding: 40px 0;
         transition: all 1s linear 2s;
-        position: absolute;
-        top: 0;
-        left: 25%;
-        transition: all 1s linear 5s
+        animation: showUp 1s linear forwards 2s;
+        -moz-animation: showUp 1s linear forwards 2s;
+        -o-animation: showUp 1s linear forwards 2s;
+        -webkit-animation: showUp 1s linear forwards 2s;
     }
     p {
+        opacity: 0;
         font-size: 24px;
-        position:absolute;
-        font-weight: 600;
-        top: 15vh;
-        left: 25%;
-        transition: all 1s linear 5s
+        font-weight: 900;
+        animation: showUp 1s linear forwards 2s;
+    -moz-animation: showUp 1s linear forwards 2s;
+    -o-animation: showUp 1s linear forwards 2s;
+    -webkit-animation: showUp 1s linear forwards 2s;
     }
     
     @keyframes showUp {
