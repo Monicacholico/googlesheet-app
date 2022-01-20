@@ -215,8 +215,10 @@ var msnry = new Masonry( grid, {
 // Will display overlay on image hover
 const itemOne = document.getElementById('item1');
 const overlay = document.getElementById('itemOne');
-const descriptions = document.querySelectorAll('description-content');
+const descriptions = document.querySelectorAll('.description-content');
 const allDescriptions = [...descriptions];
+const itemwOverlay = document.querySelectorAll('.withOverlay');
+const allItemswOverlay = [...itemwOverlay];
 const itemTwo = document.getElementById('item2');
 const overlay1 = document.getElementById('itemTwo');
 const content1 = document.querySelector('.item-desc__wrap-content');
@@ -228,35 +230,63 @@ const allclosing = [...close];
 
 
 function displayDesc() {
-	// allDescriptions.forEach( desc => {
-	// 	desc.style.display = 'flex';
-	// 	desc.classList.add('item-desc');
-	// })
-	// allContents.forEach ( content => {
-	// 	content.classList.remove('descItem');
-	// 	content.classList.add('descItemshow');
-	// })
-
-	overlay.style.display = 'flex';
-	overlay.classList.add('item-desc');
-	content1.classList.remove('descItem');
-	content1.classList.add('descItemshow');
+	allDescriptions.forEach( desc => {
+		console.log(allDescriptions[0].nextElementSibling);
+		desc.style.display = 'flex';
+		desc.classList.add('item-desc');
+	})
+	
+	// overlay.style.display = 'flex';
+	// overlay.classList.add('item-desc');
+	// content1.classList.remove('descItem');
+	// content1.classList.add('descItemshow');
 }
 
+function displayOverlayContent() {
+	
+	allContents.forEach ( content => {
+		content.classList.remove('descItem');
+		content.classList.add('descItemshow');
+	})
+} 
 
 
-itemOne.addEventListener('mouseover', displayDesc);
-// itemTwo.addEventListener('mouseover', displayDesc);
+allItemswOverlay.forEach ( desc => {
+	desc.addEventListener('click', () => {
+		displayDesc();
+		displayOverlayContent();
+		
+	});
+})
 
+
+// itemOne.addEventListener('mouseover', displayDesc);
 // itemTwo.addEventListener('mouseover', displayDesc);
 
 allclosing.forEach(closing => {
 	closing.addEventListener('click', function() {
-		overlay.style.display = 'none';
-		overlay.classList.remove('item-desc');
-		content1.classList.remove('descItemshow')
-		content1.classList.add('descItem');
-		// overlay1.style.display = 'none';
-		// overlay1.classList.remove('item-desc');
+		// overlay.style.display = 'none';
+		// overlay.classList.remove('item-desc');
+		// content1.classList.remove('descItemshow')
+		// content1.classList.add('descItem');
+		removeDesc();
+		removeOverlay();
+
 	})
 })
+
+function removeOverlay() {
+	allDescriptions.forEach( desc => {
+		desc.style.display = 'none';
+		desc.classList.remove('item-desc');
+	})
+}
+
+function removeDesc() {
+	allContents.forEach( elContent => {
+		if(elContent.classList.contains('descItemShow')) {
+			console.log(elContent);
+			elContent.style.display = "none";
+		} 
+	})
+}
