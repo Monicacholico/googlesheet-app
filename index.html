@@ -2,394 +2,154 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="shortcut icon" href="#" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-	<script
-	src="https://code.jquery.com/jquery-3.6.0.min.js"
-	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-	crossorigin="anonymous"></script>
-    <title>52</title>
+    <title>googlesheet app</title>
   </head>
   <body>
-	<div class='wrapper' style='visibility: hidden;' >
-		<!-- TAB BEGINNING -->
-		<section class="tab">
-			<header>
-				<h1>Hello World!</h1>
-				<nav>
-					<ul class="nav" id="nav-tab">
-						<li class="active"><a href="#grid">Ideas</a></li>
-						<li><a href="#transitions">Goals</a></li>
-						<li><a href="#events">Sections</a></li>
-						<li><a href="#canvas">Tasks</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</header>
-			<div class="tab-content">
-				<article class="tab-pane active" id="grid">
-					<div class="side-image">
-						<div class="pointe-shoes-wrapper">
-							<img src="/NYT/Blog/pointeShoesFromBottom.png" alt="" class="pointe-shoes">
-						</div>
-					</div>
-					<div id="idea2" class="idea">
-						<div class="wrapper-idea">
-							<h3>Twit</h3>
-							<div class=""></div>
-						</div>
-					</div>
-				</article>
-		
-				<!---------------           SECOND TAB           -------------------->
-		
-				<article class="tab-pane" id="transitions">
-					<div class="header-transitions">
-						<h2>Transitions & Animations</h2>
-					</div>
-					<div class="transitions-container">
-						<div class="soccer inside-container">
-							<h3>Translate & Scale transitions</h3>
-							<div class="grass">
-								Click the circle!
-								<div class="soccerball"></div>
-							</div>
-						</div><!-- end of soccer -->
-						<div class="fading inside-container">
-							<h3>To do Input</h3>
-							<div class="to-do">
-								<div class="header-list">Add to the "To Do List"</div>
-								<div class="content-list">
-									<input type="text" id="my-input">
-									<button type="button" onclick="addTodo()" id="my-button">Add</button>
-									<ul id="my-list">
-		
-									</ul>
-								</div>
-								<div class="footer-list"></div>
-							</div><!--end to-do -->
-						</div><!-- end fading -->
-						<div class="to-do-list inside-container">
-							<div class="header-list">
-								<h3>To do List</h3>
-								<input type="text" id="task-input">
-								<button type="button" id="list-button" onclick="newElement()">Add</button>
-							</div>
-							<div class="content-list">
-								<ul id="my-to-do-list">
-									<li class="checked">Call School</li>
-								</ul>
-							</div>
-							<div class="footer-list">
-		
-							</div>
-						</div><!-- end to-do-list -->
-						<div class="inside-container parallax">
-							<h3>Parallax</h3>
-							<div class="parallasx"></div>
-							<div class="inside-parallax">
-								<p>Scroll Up and Down this page to see the parallax scrolling effect.
-								This div is just there to enable scrolling.
-								Tip: Try to remove the background attachment property to remove the srcolling effect</p>
-							</div>
-							<div class="parallax"></div>
-						</div>
-					</div><!-- end transitions-container -->
-					<div class="my-grid-10 filter-container" id="myBttons">
-						<div class="btn active"  onclick="filterSelection('all')">Show All</div>
-						<div class="btn" onclick="filterSelection('egiptian')">Egiptian</div>
-						<div class="btn" onclick="filterSelection('greek')">Greek</div>
-						<div class="btn" onclick="filterSelection('giselle')">Giselee</div>
-						<div class="btn" onclick="filterSelection('other')">Other</div>
-					</div>
-					<div class="my-grid-4">
-						<div class="filterDiv egiptian">Fouette</div>
-						<div class="filterDiv egiptian">Ulanova</div>
-						<div class="filterDiv egiptian">Alpha</div>
-						<div class="filterDiv greek">Contempora</div>
-						<div class="filterDiv greek">Serenade</div>
-						<div class="filterDiv greek">Capulet</div>
-						<div class="filterDiv giselle">Balance</div>
-						<div class="filterDiv giselle">Elite</div>
-						<div class="filterDiv giselle">Rubi</div>
-						<div class="filterDiv giselle">vole</div>
-						<div class="filterDiv other">Gaynor Minden</div>
-						<div class="filterDiv other">Dream Pointe</div>
-					</div>
-					<div class="contact-grid">
-						<div></div>
-						<div class="songs">
-							<div id="filters"></div>
-							<div class="inside-container">
-								<h2>Playlist Songs</h2>
-								<ol id="playlist">
-									<li data-genre="pop" data-grammy="yes">"Thank you, Next" by Arianna Grande</li>
-									<li data-genre="hip-hop" data-grammy="yes">"Sicko Mode" by Travis Scott</li>
-									<li data-genre="rock" data-grammy="yes">"High Hopes" by Pink Floyd</li>
-									<li data-genre="pop" data-grammy="yes">"Girls Like You" by Maroon 5</li>
-									<li data-genre="hip-hop" data-grammy="no">"Wow" by Post Malone</li>
-									<li data-genre="hip-hop" data-grammy="no">"Better Now" by Meek Mill</li>
-									<li data-genre="hip-hop" data-grammy="no">"Going Bad" by Cardi</li>
-									<li data-genre="pop" data-grammy="yes">"Shallow" by Ladi Gaga</li>
-									<li data-genre="rock" data-grammy="yes">"Natural" by Imagine Dragons</li>
-									<li data-genre="electronic" data-grammy="no">"Close to me" by Ellie Goulding</li>
-									<li data-genre="country" data-grammy="yes">"SEh got the Best of Me" by Luke Combs</li>
-									<li data-genre="hip-hop" data-grammy="no">"A lot by" by 21 Savage</li>
-									<li data-genre="hip-hop" data-grammy="no">"Backing it Up" by Pardisson Fontaine</li>
-									<li data-genre="pop" data-grammy="no">"Consequences" by Camila Cabello</li>
-									<li data-genre="hip-hop" data-grammy="yes">"Yes, Talk to Me" by Tory Lanez</li>
-									<li data-genre="hip-hop" data-grammy="yes">"No stylist" by French Montana</li>
-									<li data-genre="rock" data-grammy="no">"Bad Liar" by Imagine Dragons</li>
-									<li data-genre="pop" data-grammy="yes">"Without Me" by Halsey</li>
-								</ol>
-							</div><!--end of inside container -->
-						</div><!-- end of songs -->
-						<div></div>
-					</div><!-- end of contact grid -->
-				</article>
-				<article class="tab-pane" id="events">
-					<h2>Drag & Drop</h2>
-					<p>How to make an elment draggable and rop it o to another empty element.</p>
-					<div class="empty">
-						<div class="fill" draggable="true"></div>
-					</div>
-					<div class="empty"></div>
-					<div class="empty"></div>
-					<div class="empty"></div>
-					<div class="empty"></div>
-				</article>
-				<article class="tab-pane" id="canvas">
-					<h2>This is for canvas projects</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur dolorem dolores facere perspiciatis quam quod repudiandae temporibus, ullam vel.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, perspiciatis.</p>
-					<p>Lorem ipsum dolor sit amet.</p>
-				</article>
-				<article class="tab-pane" id="contact">
-					<h2>This is for a contact form</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, perferendis.</p>
-					<form action="submit">
-						<label for="for-name" name="name" aria-placeholder="Your name">Name</label>
-						<input type="text" id="for-name">
-					</form>
-					<div>
-						<h2>Add style to an element</h2>
-						<p>Click the Try it button to add "style" class to the following div element</p>
-						<button id="myButton" type="button" onclick="addStyle()">Add Style</button>
-						<div id="myDiv">This is a Div element</div>
-					</div>
-					<div class="contact-grid">
-						<div>
-							<p>This is the code value of the key you enter <span id="key-code"></span></p>
-						</div>
-						<div>
-							<div class="to-do-list inside-container">
-								<div class="header-list">
-									<h3>To do List</h3>
-									<input type="text" id="today-input">
-									<button type="button" onclick="newTask()" id="dailyList-button">Add</button>
-								</div>
-								<div class="content-list">
-									<ul id="daily-to-do-list">
-		
-									</ul>
-									<div class="footer-list">
-										<div class="grid-list" id="task-squares">
-		
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<p> This is the counter <span id="counter"></span></p>
-						</div>
-					</div>
-				</article>
+	<p>Google Sheets API Quickstart</p>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize_button" style="display: none;">Authorize</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>
+
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+
+
+	<!-- <div class='wrapper' style='visibility: hidden;' >
+		<section class="gallery">
+			<div id="adWrapper">
+				<h2>HELLOOOO</h2>
+				<div class="imgstyle" id="extralarge"></div>
+				<div class="imgstyle" id="large"></div>
+				<div class="imgstyle" id="medium"></div>
+				<div class="imgstyle" id="small"></div>
 			</div>
-	
-	
-	
-	
-			<!-- END -->
 		</section>
+	</div> -->
 
-		
+    <script type="text/javascript">
+      // Client ID and API key from the Developer Console
+    //   var CLIENT_ID = '<YOUR_CLIENT_ID>';
+      var CLIENT_ID = '32672716371-iq3nbgbrdar3t0jnc9h90ec1fqhr3c9o.apps.googleusercontent.com';
+      var API_KEY = 'AIzaSyArhXDaZmE1RBUXfEhoqtn7_-5rC6EHecU';
 
+      // Array of API discovery doc URLs for APIs used by the quickstart
+      var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
+    //   var DISCOVERY_DOCS = ["https://docs.google.com/spreadsheets/d/1QgPIq08eoaKNb9O2ADuW7TrbcG8-RIN3HIgkFlkuu7M"];
 
+      // Authorization scopes required by the API; multiple scopes can be
+      // included, separated by spaces.
+      var SCOPES = "https://www.googleapis.com/auth/spreadsheets";
 
+      var authorizeButton = document.getElementById('authorize_button');
+      var signoutButton = document.getElementById('signout_button');
 
+      /**
+       *  On load, called to load the auth2 library and API client library.
+       */
+      function handleClientLoad() {
+        gapi.load('client:auth2', initClient);
+      }
 
-		<!-- ::::: HERO ::::: -->
+      /**
+       *  Initializes the API client library and sets up sign-in state
+       *  listeners.
+       */
+      function initClient() {
+        gapi.client.init({
+          apiKey: API_KEY,
+          clientId: CLIENT_ID,
+          discoveryDocs: DISCOVERY_DOCS,
+          scope: SCOPES
+        }).then(function () {
+          // Listen for sign-in state changes.
+          gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
-		<!-- <section class='hero'>
-			<picture>
-				<img src="./assets/images/hero.jpg" alt="">
-			</picture>
-			<div class='section-header'>The Power of Brands to Drive Social Change</div>
-			<div class='devider-line'></div>
-		</section> -->
+          // Handle the initial sign-in state.
+          updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+          authorizeButton.onclick = handleAuthClick;
+          signoutButton.onclick = handleSignoutClick;
+        }, function(error) {
+          appendPre(JSON.stringify(error, null, 2));
+        });
+      }
 
-		<!-- ::::: HOW TO SHARE ::::: -->
-<!-- 
-		<section class='how-to-share'>
-			<div class='copy-left'>How to share values-driven stories and reach new audiences.</div>
-			<div class="copy-right">
-				<p><span class='bold-cap'>Every marketer</span> knows their brand is much more than a logo and a pithy tagline. And this was never clearer than coming out of 2020, when consumers were increasingly turning to brands to take action on key issues such as climate change, societal contributions, responsible business practices and more. Now is the time to speak to your brand values — and mean it.</p>
-				<p>Amazon Ads recently commissioned a survey from Environics Research about the values that matter most to consumers and found that 83 percent of U.S. respondents felt more brands should do their part in helping the world, especially during difficult times.</p>
-				<p>“The current generation of consumers expects brands to be values-driven and advocate for social good,” says Vann Graves, the executive director of Brandcenter at Virginia Commonwealth University. “To reach consumers, brands must be aware of and take part in the larger societal conversations happening in real time.”</p>
-				<p>Looking for inspiration? Here, we will explore Indeed’s Rising Voices program, which brought multiple brands together to give opportunities to underrepresented filmmakers. It is a powerful example of values-driven advertising in action.</p>
-			</div>
-		</section> -->
+      /**
+       *  Called when the signed in status changes, to update the UI
+       *  appropriately. After a sign-in, the API is called.
+       */
+      function updateSigninStatus(isSignedIn) {
+        if (isSignedIn) {
+          authorizeButton.style.display = 'none';
+          signoutButton.style.display = 'block';
+          listMajors();
+        } else {
+          authorizeButton.style.display = 'block';
+          signoutButton.style.display = 'none';
+        }
+      }
 
-		<!-- ::::: TAKE A STAND ::::: -->
+      /**
+       *  Sign in the user upon button click.
+       */
+      function handleAuthClick(event) {
+        gapi.auth2.getAuthInstance().signIn();
+      }
 
-		<!-- <section class='take-a-stand'>
-			<div class='section-header'>Take a Stand</div>
-			<picture>
-				<img src="./assets/images/pic-1.png" alt="">
-			</picture>
-			<div class='section-para'>The image on screen, when done correctly, can change values, opinions and social commentary.</div>
-			<div class='credit'><span class='name'>Deondray Gossfield</span>, filmmaker</div>
-		</section> -->
+      /**
+       *  Sign out the user upon button click.
+       */
+      function handleSignoutClick(event) {
+        gapi.auth2.getAuthInstance().signOut();
+      }
 
-		<!-- ::::: THE INITIAL IDEA ::::: -->
+      /**
+       * Append a pre element to the body containing the given message
+       * as its text node. Used to display the results of the API call.
+       *
+       * @param {string} message Text to be placed in pre element.
+       */
+      function appendPre(message) {
+        var pre = document.getElementById('content');
+        var textContent = document.createTextNode(message + '\n');
+        pre.appendChild(textContent);
+      }
 
-		<!-- <section class='the-initial-idea'>
-			<div class='box-left'>
-				<p><span class="bold-cap">The initial idea</span> for Rising Voices was simple: “What if we do this really cool thing with short films to show that jobs can change people?” recalls LaFawn Davis, the group vice president of environmental, social and governance at Indeed, a leading job-listings website. Indeed wanted the program to support filmmakers who were BIPOC — Black, Indigenous or other people of color. But how could they make the most impact?</p> 
-				<p>The Environics survey found that 72 percent of U.S. consumers yearn for more diversity and representation in advertising. And 75 percent desire to learn more about the customs and heritage of racial and ethnic groups in their country. “We're at a place where if you don't have diverse voices, you're not being real,” Graves says. “And no one has the patience for fairy tales.”The initial idea for Rising Voices was simple: “What if we do this really cool thing with short films to show that jobs can change people?” recalls LaFawn Davis, the group vice president of environmental, social and governance at Indeed, a leading job-listings website. Indeed wanted the program to support filmmakers who were BIPOC — Black, Indigenous or other people of color. But how could they make the most impact?</p>
-				<div>
-					<div class='large-percent'><div class='value'>0</div><span class='percent-symbol'>%</span></div>
-					<div class='consumer-copy'>of consumers are willing to pay more for brands that come from a place of authenticity</div>
-				</div>
-				<p><span class='bold-cap'>Indeed approached Hillman Grad</span> Productions, which aims to provide support systems for emerging filmmakers from underrepresented communities, and they honed the concept together: They would give $100,000 to chosen filmmakers and work with each of them to create a short film that touches on the theme of opportunity. The films would be screened at the 2021 Tribeca Film Festival, which was five months away.</p>
-				<p>“In Hollywood you have to have a high level of privilege to even break into the business,” says Rishi Rajani, president of Hillman Grad. “You need money to make a short film and have something to show or no one will take you seriously. We wanted to provide this, along with ongoing mentorship for the artists.”</p>
-				<p>Hillman Grad and Indeed announced the contest on social media and picked 11 filmmakers from a variety of backgrounds to create 10 shorts in only six weeks. A married couple, Deondray Gossfield and Quincy LeNear Gossfield, entered jointly with a script for their powerful short film “Flames,” about former high school friends who found themselves at a turning point in their lives and relationship. “Deondray and I have been producing television together for many years,” says LeNear Gossfield. “Rising Voices is helping us make the tough transition to directing, which is what we really love.”</p>
-				<p>Indeed's Rising Voices program took a stand on inclusivity, provided genuine support to BIPOC filmmakers and had the potential to put meaningful stories from underrepresented populations in front of new audiences. But there was one problem: How could they reach a large number of viewers all around the country?</p>
-			</div> -->
+      /**
+       * Print the names and majors of students in a sample spreadsheet:
+       * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+       */
+       function listMajors() {
+        gapi.client.sheets.spreadsheets.values.get({
+          spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
+          range: 'Class Data!A2:E',
+        }).then(function(response) {
+          var range = response.result;
+          if (range.values.length > 0) {
+            appendPre('Name, Major:');
+            for (i = 0; i < range.values.length; i++) {
+              var row = range.values[i];
+              // Print columns A and E, which correspond to indices 0 and 4.
+              appendPre(row[0] + ', ' + row[4]);
+            }
+          } else {
+            appendPre('No data found.');
+          }
+        }, function(response) {
+          appendPre('Error: ' + response.result.error.message);
+        });
+      }
+    </script>
 
-			<!-- ADAM KEY ::::::::::::  -->
-			<!-- <div class='audio-box'>
-				<div class='talent-box'>
-					<div class='talent-pic'>
-						<img src="./assets/images/deondray-gossfield-quincy-lenear-gossfield.png" alt="">
-					</div>
-					<div class='audio-talent'>Filmmakers Quincy LeNear<br>Gossfield (left) and Deondray<br>Gossfield (right, audio)</div>
-				</div>
-				<div id='player-1' class='audio-player'></div>
-				<div class='player-control'>Click to Listen / Mute</div>
-			</div> -->
-			<!-- end of ADAM KEY :::::  -->
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
 
-		<!-- </section> -->
-
-		<!-- ::::: MEET AUDIENCES ::::: -->
-
-		<!-- <section class='meet-audiences'>
-			<div class='section-header'>Meet Audiences Where They Are</div>
-			<picture>
-				<img src="./assets/images/pic-2.png" alt="">
-			</picture>
-			<div class='section-para'>Our customers go to Amazon properties with a purpose: to read, to shop, to watch, to listen. We engage audiences throughout their day and when they are immersed in things they love.’</div>
-			<div class='section-para-2'><span class='bold-cap'>Claire Paull</span>, head of global marketing and training, Amazon Ads </div>
-		</section> -->
-
-		<!-- ::::: INDEED AND HILLMAN ::::: -->
-
-		<!-- <section class='indeed-and-hillman'> -->
-
-			
-			<!-- ADAM KEY ::::::::::::  -->
-			<!-- <div class='audio-box'>
-				<div class='talent-box'>
-					<div class='talent-pic'>
-						<img src="./assets/images/adam-key.png" alt="">
-					</div>
-					<div class='audio-talent'>Adam Key, senior marketing manager,<br>Fire TV</div>
-				</div>
-				<div id='player-2' class='audio-player'></div>
-				<div class='player-control'>Click to Listen / Mute</div>
-			</div> -->
-			<!-- end of DEODRAY GROSSFIELD :::::  -->
-		
-			<!-- <div class='box-right'>
-				<p><span class='bold-cap'>Indeed and Hillman Grad</span> had set in motion a fantastic program, but to fulfill their goals, they needed a space to amplify the program to a large audience. That's why they turned to Amazon Ads, which offered them a massive audience throughout every part of the United States. An added bonus? With Fire TV's Stream It Forward program, Amazon helped the campaign drive even greater impact by raising money for Goodwill, the chosen charity of Indeed — donating $1 to Goodwill Industries International for every hour streamed of Rising Voices content and select titles on Prime Video, up to $200,000.</p>
-				<p>“Our customers go to Amazon properties with a purpose: to read, to shop, to watch, to listen,” says Adam Key, senior marketing manager at Fire TV and Amazon. “We capture their attention in places they've chosen to organically spend time by positively enhancing their experience, rather than disrupting it. We were able to provide Indeed access to our most impactful and visual placements on the device, including in the feature rotator at the top of the screen.”</p>
-				<div>
-					<div class='large-percent'><div class='value'>0</div><span class='percent-symbol'>%</span></div>
-					<div class='consumer-copy'>of consumers actively seek out brands that are sustainable in their business practices</div>
-				</div>
-				<p>The Environics survey found that 95 percent of U.S. consumers want to decide when and where they interact with a brand. And 80 percent of consumers have a strong desire for more human connection, after the recent periods of social distancing. The Rising Voices program addressed both of these needs by providing compelling, moving human stories in the short films, which were teased in engaging ad content where and when viewers were in the mood to watch. And people did watch, quickly blowing past the goal of 200,000 and exceeding it by three times.</p>
-				<p>“It was incredible,” says Gossfield. “Our faces were everywhere, on the Amazon Video homepage, Fire TV, websites, social media — everywhere. Quincy and I have been doing independent filmmaking for so long, but we'd never ever had that kind of ad backing. We got so many phone calls and text messages. We felt seen. It was very, very humbling.”</p>
-			</div> -->
-		
-		<!-- </section> -->
-
-		<!-- ::::: BUILD TRUST ::::: -->
-
-		<!-- <section class='build-trust'>
-			<div class='section-header'>Build Trust and<br>Lead by Example</div>
-			<picture>
-				<img src="./assets/images/pic-3.png" alt="">
-			</picture>
-			<div class='section-para-1'>Today more than ever, consumers<br>are looking for authenticity.</div>
-			<div class='section-para-2'><span class='bold-cap'>Vann Graves</span>, executive director, Brandcenter,<br>Virginia Commonwealth University</div>
-		</section> -->
-
-		<!-- ::::: THE BEST CONNECTION ::::: -->
-
-		<!-- <section class='the-best-connections'>
-			<div class='box-left'>
-				<div class='above-percentage'>
-					<p><span class='bold-cap'>The best connections</span> are the ones built on shared values. Brands must be genuine with consumers, build trust and demonstrate how they're committed. In the Environics survey, 62 percent of U.S. consumers indicate that they're currently purchasing from brands whose values align with their own. And 80 percent firmly believe they can vote with their dollars by supporting brands that are good corporate citizens. “If you're authentic and truthful, you have that consumer forever,” Graves says. “But if you lose them, it's hard to regain the trust.”</p>
-					<p>The Rising Voices program has followed through on its mission to provide real mentorship and ongoing support for the filmmakers. “We are helping the artists find agents and managers to move their careers forward,” Rajani says. “We are also giving them jobs and working with them on TV episodes and feature films. So many of them are doing so well.”</p>
-				</div>
-				<div>
-					<div class='large-percent'><div class='value'>0</div><div class='percent-symbol'>%</div></div>
-					<div class='consumer-copy'>of consumers have recently modified their way of life to concentrate more on things that are of value</div>
-				</div>
-				<div class='below-percentage'>
-					<p>When brands understand their customers' needs and values, they can be sure they're telling the right stories to the right audiences at the right time — and in the right place. With the Rising Voices program and ad campaign, Indeed and Hillman Grad were able to tell their brand stories to a broad audience and make a lasting impact by bringing underrepresented stories directly into many people's homes. And that impact will continue: Phase two of Rising Voices is already in the works.</p>
-					<p>“We want to build on top of its success,'” Davis says. “I see this program running for years to come.”</p>
-					<p>illustrations by Lorem Ipsum</p>
-				</div>
-			</div> -->
-
-			<!-- VAN GRAVES ::::::::::::  -->
-			<!-- <div class='audio-box'>
-				<div class='talent-box'>
-					<picture class='talent-pic'>
-						<img src="./assets/images/vann-graves.png" alt="">
-					</picture>
-					<div class='audio-talent'>Vann Graves, executive director,<br>Brandcenter</div>
-				</div>
-				<div id='player-3' class='audio-player'></div>
-				<div class='control-icons'>
-					<div class='icon-play'></div>
-					<div class='icon-pause'></div>
-				</div>
-				<div class='player-control'>Click to Listen / Mute</div>
-			</div> -->
-			<!-- end of VAN GRAVES ::::  -->
-
-
-		<!-- </section> -->
-
-		<!-- ::::: DOWNLOAD THE AMAZON AD ::::: -->
-
-		<!-- <section class='download-the-amazon-ads'>
-			<div class='section-para'>Download the Amazon Ads interactive eBook for more insights on how brands can share their values-driven stories.</div>
-			<div class='cta'>Learn More</div>
-			<div class='logo'>
-				<img src="./assets/images/logo.png" alt="">
-			</div>
-		</section> -->
-	</div>
 
 	<!-- ::::: MAIN JS SCRIPT ::::: -->
    
-    <script type="module" src="./js/main.js"></script>
+    <!-- <script type="module" src="./js/main.js"></script> -->
    
   </body>
 </html>
