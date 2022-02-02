@@ -6,4 +6,5 @@ dist-ssr
 node_modules
 dist.zip
 index.html
+data.js
 
